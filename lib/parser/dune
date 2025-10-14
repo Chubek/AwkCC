@@ -1,0 +1,9 @@
+(library
+ (name awkcc_parser)
+ (public_name awkcc.parser)
+ (libraries awkcc.ast awkcc.lexer)
+ (modules parser parse_driver))
+
+(menhir
+ (modules parser)
+ (flags --explain --strict))

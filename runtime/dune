@@ -1,0 +1,25 @@
+(library
+ (name awk2c_runtime)
+ (public_name awk2c.runtime)
+ (modules)  ; No OCaml modules
+ (foreign_stubs
+  (language c)
+  (names
+   awk_runtime
+   awk_array
+   awk_regex
+   awk_io
+   awk_string
+   awk_builtin)
+  (flags -O3 -std=c11 -Wall -Wextra))
+ (c_library_flags -lm -lpthread))
+
+(install
+ (section lib)
+ (files
+  (awk_runtime.h as awk2c/awk_runtime.h)
+  (awk_array.h as awk2c/awk_array.h)
+  (awk_regex.h as awk2c/awk_regex.h)
+  (awk_io.h as awk2c/awk_io.h)
+  (awk_string.h as awk2c/awk_string.h)
+  (awk_builtin.h as awk2c/awk_builtin.h)))

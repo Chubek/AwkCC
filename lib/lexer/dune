@@ -1,0 +1,8 @@
+(library
+ (name awkcc_lexer)
+ (public_name awkcc.lexer)
+ (libraries awkcc.ast)
+ (modules tokens lexer)
+ (preprocess (pps ppx_deriving.show)))
+
+(ocamllex lexer)

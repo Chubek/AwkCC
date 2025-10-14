@@ -1,0 +1,5 @@
+(library
+ (name awkcc_ssa)
+ (public_name awkcc.ssa)
+ (libraries awkcc.ir awkcc.cfg ocamlgraph)
+ (modules dominance ssa_transform ssa_destroy))

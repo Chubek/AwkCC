@@ -1,0 +1,17 @@
+(executable
+ (name main)
+ (public_name awk2c)
+ (libraries
+  awk2c.ast
+  awk2c.lexer
+  awk2c.parser
+  awk2c.ir
+  awk2c.cfg
+  awk2c.ssa
+  awk2c.analysis
+  awk2c.optimize
+  awk2c.regex
+  awk2c.codegen
+  awk2c.utils)
+ (modules main)
+ (modes exe))

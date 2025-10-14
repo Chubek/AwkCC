@@ -34,3 +34,16 @@ setup.log
 
 # Local OPAM switch
 _opam/
+
+# Test outputs
+test_output/
+
+*.output
+
+# Generated C code (during testing)
+
+*.c.generated
+
+# OS files
+.DS_Store
+Thumbs.db

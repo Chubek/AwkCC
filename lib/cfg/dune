@@ -1,5 +1,0 @@
-(library
- (name awkcc_cfg)
- (public_name awkcc.cfg)
- (libraries awkcc.ir ocamlgraph)
- (modules cfg cfg_builder))

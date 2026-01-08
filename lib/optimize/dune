@@ -1,5 +1,0 @@
-(library
- (name awkcc_optimize)
- (public_name awkcc.optimize)
- (libraries awkcc.ir awkcc.cfg awkcc.ssa awkcc.analysis)
- (modules constant_fold copy_prop dead_code cse array_opt loop_opt))

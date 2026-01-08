@@ -1,5 +1,0 @@
-(library
- (name awkcc_codegen)
- (public_name awkcc.codegen)
- (libraries awkcc.ir awkcc.cfg)
- (modules c_ast c_gen c_printer))

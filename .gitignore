@@ -1,49 +1,16 @@
-*.annot
-*.cmo
-*.cma
-*.cmi
-*.a
+.dub
+docs.json
+__dummy.html
+docs/
+/awkcc
+awkcc.so
+awkcc.dylib
+awkcc.dll
+awkcc.a
+awkcc.lib
+awkcc-test-*
+*.exe
+*.pdb
 *.o
-*.cmx
-*.cmxs
-*.cmxa
-
-# Files containing detailed information about the compilation (generated
-# by `ocamlc`/`ocamlopt` when invoked using the option `-bin-annot`).
-# These files are typically useful for code inspection tools
-# (e.g. Merlin).
-*.cmt
-*.cmti
-
-# ocamlbuild and Dune default working directory
-_build/
-
-# ocamlbuild targets
-*.byte
-*.native
-
-# oasis generated files
-setup.data
-setup.log
-
-# Merlin configuring file for Vim and Emacs
-.merlin
-
-# Dune generated files
-*.install
-
-# Local OPAM switch
-_opam/
-
-# Test outputs
-test_output/
-
-*.output
-
-# Generated C code (during testing)
-
-*.c.generated
-
-# OS files
-.DS_Store
-Thumbs.db
+*.obj
+*.lst

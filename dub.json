@@ -1,0 +1,9 @@
+{
+	"authors": [
+		"Chubak Bidpaa"
+	],
+	"copyright": "Copyright © 2025, Chubak Bidpaa",
+	"description": "An AWK scripting language compiler, targeting C, with C runtime library",
+	"license": "MIT",
+	"name": "awkcc"
+}

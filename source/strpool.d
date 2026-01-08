@@ -6,6 +6,7 @@ import awkcc.util : isPowerOfTwo;
 import core.stdc.string : memcmp;
 import core.stdc.stdint : uint32_t, uint64_t;
 import std.algorithm : max;
+import std.traits : isSomeString;
 
 /**
  * String interning pool.
@@ -101,6 +102,13 @@ struct StringPool
         }
     }
 
+    string intern(S)(S s) if (isSomeString!S && !is(S : string))
+    {
+        import std.conv : to;
+
+        return this.intern(to!string(s));
+    }
+
     /**
      * Reset the pool (does NOT free _arena memory).
      *
@@ -114,6 +122,7 @@ struct StringPool
             _table[i].len = 0;
             _table[i].hash = 0;
         }
+
         _count = 0;
     }
 
@@ -166,6 +175,7 @@ struct StringPool
                 _count++;
                 return;
             }
+
             i = (i + 1) & mask;
         }
     }
@@ -181,6 +191,7 @@ struct StringPool
             h ^= cast(ubyte) c;
             h *= 1099511628211UL;
         }
+
         return h;
     }
 }

@@ -102,7 +102,7 @@ struct StringPool
         }
     }
 
-    string intern(S)(S s) if (isSomeString!S && !is(S : string))
+    string intern(S)(S s) if (isSomeString!S && !is(S == string))
     {
         import std.conv : to;
 
@@ -215,6 +215,12 @@ unittest
     assert(a != c);
 
     assert(pool.size == 2);
+
+    const char[] ss = ['f', 'o', 'b'];
+    auto ssp = pool.intern(ss);
+
+    assert(ssp == "fob");
+    assert(pool.size == 3);
 
     writeln("StringPool tests passed");
 }
